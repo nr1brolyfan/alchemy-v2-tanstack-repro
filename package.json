@@ -1,0 +1,43 @@
+{
+  "name": "tanstack-start-alchemy-vite-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "check-types": "tsc --noEmit",
+    "inspect:dist": "node scripts/inspect-dist.mjs",
+    "inspect:live": "node scripts/inspect-live.mjs",
+    "alchemy:plan": "bun alchemy plan --stage repro",
+    "alchemy:deploy": "bun alchemy deploy --stage repro --yes",
+    "alchemy:destroy": "bun alchemy destroy --stage repro"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "1.168.22",
+    "@tanstack/react-start": "1.167.41",
+    "alchemy": "https://pkg.ing/alchemy/b281d6a",
+    "effect": "4.0.0-beta.66",
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20260430.1",
+    "@effect/platform-bun": "4.0.0-beta.66",
+    "@effect/platform-node": "4.0.0-beta.66",
+    "@effect/platform-node-shared": "4.0.0-beta.66",
+    "@types/node": "22.13.14",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.1",
+    "typescript": "^6",
+    "vite": "8.0.8",
+    "wrangler": "4.86.0"
+  },
+  "packageManager": "bun@1.3.14",
+  "overrides": {
+    "@effect/platform-node-shared": "4.0.0-beta.66"
+  },
+  "trustedDependencies": [
+    "esbuild",
+    "workerd"
+  ]
+}
