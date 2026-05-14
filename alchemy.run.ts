@@ -4,7 +4,6 @@ import * as Effect from "effect/Effect";
 
 export const App = Cloudflare.Vite("app", {
   compatibility: {
-    date: "2026-04-24",
     flags: ["nodejs_compat"],
   },
 });
